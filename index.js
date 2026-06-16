@@ -11,7 +11,11 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  // TODO
+  let myWord = "";
+  for (let i = 0; i < n; i++) {
+    myWord += word;
+  }
+  return myWord;
 }
 
 /**
@@ -27,7 +31,22 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
-  // TODO
+  let myWord = "";
+  let spacer = " ";
+  for (let i = 0; i < n; i++) {
+    if (n <= 0) {
+      myWord = "";
+    } else if (word == "") {
+      myWord = "";
+    } else if (i == 0 && n <= 1) {
+      myWord += word;
+    } else if (i == 0 || i < n - 1) {
+      myWord += word + spacer;
+    } else {
+      myWord += word;
+    }
+  }
+  return myWord;
 }
 
 /**
@@ -42,7 +61,11 @@ export function echoWithSpace(word, n) {
  * sumTo(100); // 5050
  */
 export function sumTo(n) {
-  // TODO
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -58,7 +81,11 @@ export function sumTo(n) {
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
+  let sum = 0;
+  for (let i = a; i <= z; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -73,7 +100,10 @@ export function sumFromTo(a, z) {
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
-  // TODO
+  for (let i = n; i > 0; i--) {
+    console.log(i);
+  }
+  return;
 }
 
 /**
@@ -88,7 +118,15 @@ export function countdown(n) {
  * sumOddsToN(1); // 1
  */
 export function sumOddsToN(n) {
-  // TODO
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 !== 0) {
+      sum += i;
+    } else {
+      sum += 0;
+    }
+  }
+  return sum;
 }
 
 /**
@@ -108,7 +146,14 @@ export function sumOddsToN(n) {
  * getGrowthTime(5, 78); // 80
  */
 export function getGrowthTime(start, target) {
-  // TODO
+  let growth = 0;
+  if (start <= 0) {
+    return undefined;
+  }
+  for (let i = start; i < target; i *= 2) {
+    growth += 20;
+  }
+  return growth;
 }
 
 /**
